@@ -20,18 +20,22 @@ def parse_args():
     parser = argparse.ArgumentParser(description="Flowers Classifier")
     parser.add_argument('-i', '--image',
                         required=False,
+                        metavar='',
                         default='./test_images/cautleya_spicata.jpg',
                         help='image path /test_images/XX.jpg')
     parser.add_argument('-m', '--model',
                         required=False,
+                        metavar='',
                         default='./train_model.h5',
                         help='Train model path XX.h5')
     parser.add_argument('-t', '--top_k',
                         required=False,
+                        metavar='',
                         default=5,
                         help='Top k predections ')
-    parser.add_argument('-c', '--category_names',
+    parser.add_argument('-c', '--category',
                         required=False,
+                        metavar='',
                         default='label_map.json',
                         help='Class label names XX.json')
     args = vars(parser.parse_args)
