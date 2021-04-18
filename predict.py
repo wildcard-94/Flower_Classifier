@@ -55,8 +55,7 @@ def process_image(image):
 def predict(image_path ,model_path , top_k, classes):
 
     
-    top_k = int(top_k)
-    model_path = './train_model.h5'   
+    top_k = int(top_k)  
     model = load_model(model_path)
     im = Image.open(image_path)
     test_image = np.asarray(im)
